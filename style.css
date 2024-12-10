@@ -27,3 +27,12 @@ body > div {
   align-items: center;
   text-align: center;
 }
+
+textarea {
+  width: 100%;
+}
+
+#keturioliktas textarea {
+  background-color: #ececec;
+  border: 1px solid #bebebe;
+}

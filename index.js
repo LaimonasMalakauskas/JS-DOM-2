@@ -109,3 +109,9 @@ let tekstasDivui = document.getElementById('tekstas-divui');
 tekstasDivui.oninput = function(){
   divKeitimui.innerHTML = this.value;
 }
+
+//keturioliktas
+
+function pridetiZodi(elementas, zodis){
+  document.getElementById(elementas).value += zodis + ' ';
+}
