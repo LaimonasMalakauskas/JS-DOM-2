@@ -181,3 +181,9 @@ document.getElementById('kitas-perjungti-mygtukas').onclick = function(){
     kitasPerjungtiTekstas.style.display = 'block';
   }
 }
+
+//devynioliktas
+
+document.getElementById('devyniolikto-tekstas').onclick = function(){
+  this.style.display = 'none';
+}
