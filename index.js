@@ -167,3 +167,17 @@ perjungtiMygtukas.onclick = function(){
     perjungtiTekstas.style.display = 'none';
   }
 }
+
+//astuonioliktas
+
+let kitasPerjungtiTekstas = document.getElementById('kitas-perjungti-tekstas');
+
+document.getElementById('kitas-perjungti-mygtukas').onclick = function(){
+  if (kitasPerjungtiTekstas.style.display == 'block'){
+    this.innerText = 'Rodyti';
+    kitasPerjungtiTekstas.style.display = 'none';
+  }else{
+    this.innerText = 'Nerodyti';
+    kitasPerjungtiTekstas.style.display = 'block';
+  }
+}
