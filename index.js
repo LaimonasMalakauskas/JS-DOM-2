@@ -152,3 +152,18 @@ function antrasSkirtukas(){
   antroSkirtukoTurinys.style.display = 'block';
   pirmoSkirtukoTurinys.style.display = 'none';
 }
+
+//septynioliktas
+
+let perjungtiMygtukas = document.getElementById('perjungti-mygtukas');
+let perjungtiTekstas = document.getElementById('perjungti-tekstas');
+
+perjungtiMygtukas.onclick = function(){
+  if (this.innerText == 'Rodyti'){
+    this.innerText ='Nerodyti';
+    perjungtiTekstas.style.display = 'block';
+  }else{
+    this.innerText = 'Rodyti';
+    perjungtiTekstas.style.display = 'none';
+  }
+}
