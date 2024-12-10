@@ -138,3 +138,17 @@ function ilgiausiasZodis() {
   document.getElementById('penkiolikto-atsakymai').innerHTML = `<p>Ilgiausias zodis: ${ilgiausias}</p>
   <p>Ilgis: ${ilgiausias.length} simboliu(-iai). </p>`;
 }
+
+//sesioliktas
+
+let pirmoSkirtukoTurinys = document.getElementById('pirmas-skirtukas');
+let antroSkirtukoTurinys = document.getElementById('antras-skirtukas');
+
+function pirmasSkirtukas(){
+  pirmoSkirtukoTurinys.style.display = 'block';
+  antroSkirtukoTurinys.style.display = 'none';
+}
+function antrasSkirtukas(){
+  antroSkirtukoTurinys.style.display = 'block';
+  pirmoSkirtukoTurinys.style.display = 'none';
+}
