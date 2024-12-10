@@ -74,10 +74,10 @@ document.getElementById('vienuolikto-turinys').innerHTML = isvedimui;
 
 //dvyliktas
 
-function keistiSpalva(elementas, spalva){
+function keistiSpalva(elementas, spalva) {
   document.getElementById(elementas).style.color = spalva;
 }
-function keistiDydi(elementas, dydis){
+function keistiDydi(elementas, dydis) {
   document.getElementById(elementas).style.fontSize = dydis + 'px';
 }
 
@@ -90,28 +90,51 @@ let divKeitimui = document.getElementById('div-keitimui');
 let plocioSlider = document.getElementById('plocio-slider');
 let aukscioSlider = document.getElementById('aukscio-slider');
 
-plocioSlider.oninput = function() {
+plocioSlider.oninput = function () {
   divKeitimui.style.width = this.value + 'px';
 }
 
-aukscioSlider.oninput = function() {
+aukscioSlider.oninput = function () {
   divKeitimui.style.height = this.value + 'px';
 }
 
 let spalvosPasirinkimas = document.getElementById('spalvos-pasirinkimas');
 
-spalvosPasirinkimas.oninput = function(){
+spalvosPasirinkimas.oninput = function () {
   divKeitimui.style.backgroundColor = this.value;
 }
 
 let tekstasDivui = document.getElementById('tekstas-divui');
 
-tekstasDivui.oninput = function(){
+tekstasDivui.oninput = function () {
   divKeitimui.innerHTML = this.value;
 }
 
 //keturioliktas
 
-function pridetiZodi(elementas, zodis){
+function pridetiZodi(elementas, zodis) {
   document.getElementById(elementas).value += zodis + ' ';
+}
+
+//penkioliktas
+
+let penkioliktoTekstas = document.getElementById('penkiolikto-tekstas');
+
+function zodziuKiekis() {
+  let tekstas = penkioliktoTekstas.value;
+  let zodziai = tekstas.trim().split(' ');
+  document.getElementById('penkiolikto-atsakymai').innerHTML = `<p>Zodziu kiekis: ${zodziai.length}</p>`;
+}
+
+function ilgiausiasZodis() {
+  let tekstas = penkioliktoTekstas.value;
+  let zodziai = tekstas.trim().split(' ');
+  let ilgiausias = '';
+  for (let zodis of zodziai) {
+    if (zodis.length > ilgiausias.length) {
+      ilgiausias = zodis;
+    }
+  }
+  document.getElementById('penkiolikto-atsakymai').innerHTML = `<p>Ilgiausias zodis: ${ilgiausias}</p>
+  <p>Ilgis: ${ilgiausias.length} simboliu(-iai). </p>`;
 }
